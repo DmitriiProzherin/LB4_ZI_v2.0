@@ -7,15 +7,20 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
     // Generating random 64-bit key
-    String key = createRandom64BitKey("src/key.txt");
+    createRandom64BitKey("src/key.txt");
 
     // Encrypting text with DES
     DES des = new DES();
-    des.encryptor.fromFile("src/input_text.txt").toFile("src/encrypted_text.txt").loadSecretKey("src/key.txt").performEncryption();
+    des.encryptor.fromFile("src/input_text.txt")
+                .toFile("src/encrypted_text.txt")
+                .loadSecretKey("src/key.txt")
+                .performEncryption();
 
     RSA rsa = new RSA();
     // Encrypting the key and saving key pairs
-    rsa.encryptor.fromFile("src/key.txt").toFile("src/key_with_rsa.txt").performEncryption();
+    rsa.encryptor.fromFile("src/key.txt")
+                .toFile("src/key_with_rsa.txt")
+                .performEncryption();
 
 
     // Decrypting key for DES
