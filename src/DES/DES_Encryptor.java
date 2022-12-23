@@ -11,7 +11,7 @@ public class DES_Encryptor {
     String inputFileName, outputFileName, secretKeyFileName;
     PlainText plainText;
     DES_Key key;
-    public String performEncryption(String strKey) throws IOException {
+    public String performEncryption() throws IOException {
 
         BufferedReader readerInput = new BufferedReader(new FileReader(inputFileName));
         plainText = new PlainText(readerInput.lines().collect(Collectors.joining("\n")));

@@ -431,4 +431,28 @@ public class Operation {
         return splitBlockIntoParts(b, 2).get(1);
     }
 
+    public static String string16ToSymbol(String str){
+        assert str.length() == 16;
+
+        double res = 0;
+
+        for (int i = str.length() - 1; i >=0 ; i--) {
+            if (str.charAt(i) == '1') {
+                res += Math.pow(2, str.length() - i - 1);
+            }
+        }
+        if ((int) res == 0) return "";
+        return ((char) res) + "";
+    }
+
+    public static String formatedBoolStringtoString(String s){
+        assert s.length() % 16 == 0;
+
+        StringBuilder res = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i+=16) {
+            res.append(string16ToSymbol(s.substring(i, i+16)));
+        }
+        return res.toString();
+    }
 }
