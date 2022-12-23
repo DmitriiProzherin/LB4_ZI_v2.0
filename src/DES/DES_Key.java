@@ -2,9 +2,8 @@ package DES;
 
 import static Utility.Operation.*;
 import java.util.ArrayList;
-import java.util.Random;
 
-public class SecretKey {
+public class DES_Key {
 
     private final boolean[][] keysArr = new boolean[16][48];
     private final boolean[] key_56_bit;
@@ -14,7 +13,7 @@ public class SecretKey {
     private final boolean[][] dBlocks = new boolean[16][28];
 
 
-    SecretKey(boolean[] initKey) {
+    DES_Key(boolean[] initKey) {
         assert initKey.length == 64 : "длина ключа должна быть в 64 бита";
 
         this.init_64_key = initKey;
@@ -38,7 +37,7 @@ public class SecretKey {
 
     }
 
-    SecretKey(String initKey) {
+    DES_Key(String initKey) {
         assert initKey.length() == 64 : "длина ключа должна быть в 64 бита";
 
         this.init_64_key = binaryStringToBoolArr(initKey);

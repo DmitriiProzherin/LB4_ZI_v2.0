@@ -1,3 +1,4 @@
+import DES.DES;
 import RSA.*;
 import static Utility.Operation.createRandom64BitKey;
 import java.io.IOException;
@@ -20,6 +21,10 @@ public class Main {
                     .toFile("src/decrypted_key.txt")
                     .performDecryption();
 
+
+    // Encrypting text with DES
+    DES des = new DES();
+    des.encryptor.fromFile("src/input.txt").toFile("src/output.txt").loadSecretKey("src/key.txt").performEncryption(given);
 
 
     }
