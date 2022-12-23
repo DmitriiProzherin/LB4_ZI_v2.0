@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class RSA_Encryptor {
-    BigInteger SEARCH_PRIME_AROUND = new BigInteger("1232142142141241244214124214214");
+    BigInteger SEARCH_PRIME_AROUND = new BigInteger("9223372036854775807");
     String plainText;
     String cipherText;
     String inputFileName, outputFileName;

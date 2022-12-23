@@ -1,2 +1,9 @@
 # Project exclude paths
 /out/
+/src/private_key_pair.txt
+/src/open_key_pair.txt
+/src/key_with_rsa.txt
+/src/key.txt
+/src/encrypted_text.txt
+/src/decrypted_text.txt
+/src/decrypted_key.txt
