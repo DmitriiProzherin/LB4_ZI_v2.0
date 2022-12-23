@@ -94,4 +94,16 @@ public class Operation {
         }
         return temp;
     }
+
+    public static String bigIngegerToBinaryString(BigInteger integer){
+        StringBuilder s = new StringBuilder();
+
+        while (!integer.equals(BigInteger.ZERO)) {
+            s.append(integer.mod(BigInteger.TWO));
+            integer = integer.divide(BigInteger.TWO);
+        }
+
+        return s.reverse().toString();
+
+    }
 }
