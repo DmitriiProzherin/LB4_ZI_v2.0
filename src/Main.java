@@ -13,6 +13,7 @@ public class Main {
     // Encrypting the key and saving key pairs
     String encrypted = rsa.encryptor.fromFile("src/key.txt").toFile("src/key_with_rsa.txt").performEncryption();
 
+
     // Decrypting key for DES
     String res = rsa.decryptor.fromFile("src/key_with_rsa.txt")
                     .loadSecretKey("src/private_key_pair.txt")
