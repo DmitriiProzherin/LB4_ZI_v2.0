@@ -10,11 +10,10 @@ import java.util.stream.Collectors;
 public class RSA_Encryptor {
     BigInteger SEARCH_PRIME_AROUND = new BigInteger("10000");
     String plainText;
-
     String cipherText;
     String inputFileName, outputFileName;
-
     BigInteger p, q, n, f, e, d;
+
 
     // Get filename for input
     public RSA_Encryptor fromFile(String fileName) {
