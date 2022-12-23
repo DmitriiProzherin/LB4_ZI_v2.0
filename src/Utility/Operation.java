@@ -86,7 +86,7 @@ public class Operation {
         return res;
     }
 
-    public static BigInteger bigIntPow(BigInteger a, BigInteger b){
+    public static BigInteger bigIntPower(BigInteger a, BigInteger b){
         BigInteger temp = new BigInteger(a.toByteArray()), i = new BigInteger(b.toByteArray());
         while (!i.equals(BigInteger.ONE)) {
             temp = temp.multiply(a);

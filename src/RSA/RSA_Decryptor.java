@@ -5,7 +5,6 @@ import static Utility.Operation.*;
 import java.io.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class RSA_Decryptor {
     String inputFileName, outputFileName, secretKeyFileName;
@@ -49,7 +48,7 @@ public class RSA_Decryptor {
 
         for (BigInteger block : cipherTextBlocks) {
             // Расшифрование численного представления
-            m = bigIntPow(block, d).mod(n);
+            m = block.modPow(d, n);
             decryptedBlocks.add(m);
         }
 

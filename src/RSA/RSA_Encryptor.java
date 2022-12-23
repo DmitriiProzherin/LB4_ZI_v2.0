@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class RSA_Encryptor {
-    BigInteger SEARCH_PRIME_AROUND = new BigInteger("123");
+    BigInteger SEARCH_PRIME_AROUND = new BigInteger("1232142142141241244214124214214");
     String plainText;
     String cipherText;
     String inputFileName, outputFileName;
@@ -65,7 +65,7 @@ public class RSA_Encryptor {
             // Численное представление блока
             BigInteger p = binaryStringToBigInt(block);
             // Шифрование численного представления
-            BigInteger c = bigIntPow(p, e).mod(n);
+            BigInteger c = bigIntPower(p, e).mod(n);
             encrypted_blocks.add(c);
         }
 
